@@ -1,0 +1,594 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>We Speak Computer | Pricing</title>
+  <meta
+    name="description"
+    content="We Speak Computer pricing with Geek Squad reference rates, our 75% pricing, and easy-to-read service details."
+  />
+  <style>
+    :root {
+      --bg: #071322;
+      --text: #eaf2ff;
+      --muted: #afc2dd;
+      --brand: #33d3ff;
+      --brand-2: #8d6bff;
+      --line: rgba(255, 255, 255, 0.11);
+      --card: rgba(255, 255, 255, 0.03);
+      --good: #57e39f;
+      --shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at 10% -10%, #1b3f68, transparent 35%),
+        radial-gradient(circle at 95% 0%, #412f91, transparent 30%),
+        var(--bg);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92vw);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background: rgba(7, 19, 34, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #02162f;
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.94rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--brand);
+    }
+
+    main {
+      padding-bottom: 26px;
+    }
+
+    .hero {
+      padding: 58px 0 20px;
+    }
+
+    h1 {
+      margin: 0 0 8px;
+      font-size: clamp(2rem, 5vw, 3rem);
+    }
+
+    .gradient {
+      background: linear-gradient(135deg, var(--brand), #d4ceff 65%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 74ch;
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    .hero .lead + .lead {
+      margin-top: 10px;
+    }
+
+    .pill {
+      display: inline-flex;
+      margin-top: 12px;
+      border-radius: 999px;
+      background: rgba(87, 227, 159, 0.14);
+      border: 1px solid rgba(87, 227, 159, 0.35);
+      color: #c7ffe4;
+      padding: 7px 12px;
+      font-size: 0.84rem;
+      font-weight: 700;
+    }
+
+    section {
+      padding: 14px 0 20px;
+    }
+
+    .section-title {
+      margin: 0 0 12px;
+      font-size: clamp(1.3rem, 3.4vw, 1.8rem);
+    }
+
+    .section-note {
+      color: var(--muted);
+      margin: 0 0 14px;
+      line-height: 1.55;
+    }
+
+    .service-list {
+      display: grid;
+      gap: 12px;
+    }
+
+    details.service-card {
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      background: linear-gradient(160deg, var(--card), rgba(255, 255, 255, 0.01));
+      box-shadow: var(--shadow);
+      overflow: hidden;
+    }
+
+    .service-head {
+      list-style: none;
+      cursor: pointer;
+      padding: 14px;
+      display: grid;
+      grid-template-columns: minmax(210px, 2fr) repeat(3, minmax(90px, 1fr));
+      gap: 10px;
+      align-items: center;
+    }
+
+    .service-head::-webkit-details-marker {
+      display: none;
+    }
+
+    .service-name {
+      color: #ffffff;
+      font-weight: 700;
+      line-height: 1.4;
+    }
+
+    .price-label {
+      display: block;
+      font-size: 0.75rem;
+      color: #c4d7f4;
+      text-transform: uppercase;
+      letter-spacing: 0.35px;
+      margin-bottom: 3px;
+    }
+
+    .price-value {
+      font-weight: 700;
+      color: #ffffff;
+      white-space: nowrap;
+    }
+
+    .price-value.savings {
+      color: var(--good);
+    }
+
+    .service-body {
+      border-top: 1px solid var(--line);
+      padding: 14px;
+      color: var(--muted);
+      line-height: 1.55;
+    }
+
+    .service-body p {
+      margin: 0 0 10px;
+    }
+
+    .service-body ul {
+      margin: 0;
+      padding-left: 20px;
+    }
+
+    .service-body li {
+      margin-bottom: 7px;
+    }
+
+    .service-body li:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-card {
+      margin-top: 8px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      padding: 16px;
+      background: linear-gradient(160deg, rgba(141, 107, 255, 0.2), rgba(255, 255, 255, 0.03));
+    }
+
+    .contact-card p {
+      margin: 0 0 8px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      margin: 4px 0;
+      font-weight: 700;
+      color: #d7e7ff;
+    }
+
+    .contact-link:hover {
+      color: var(--brand);
+    }
+
+    .inline-link {
+      font-weight: 700;
+      color: var(--brand);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .inline-link:hover {
+      color: #d7e7ff;
+    }
+
+    footer {
+      padding: 24px 0 32px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 860px) {
+      .service-head {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="https://wespeakcomputer.net/index.html" aria-label="Back to home">
+        <span class="logo-mark">WSC</span>
+        <span>We Speak Computer</span>
+      </a>
+      <nav class="nav-links" aria-label="Pricing navigation">
+        <a href="https://wespeakcomputer.net/index.html">Home</a>
+        <a href="#hardware">Hardware</a>
+        <a href="#software">Software</a>
+        <a href="#networking">Networking</a>
+        <a href="#setups">Setups</a>
+        <a href="wespeakcomputer_community_discounts.html">Community savings</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1><span class="gradient">Clear prices.</span> Friendly support.</h1>
+        <p class="lead">
+          We Speak Computer pricing is <strong style="color: #eaf2ff;">75% of the listed Geek Squad reference price</strong>
+          (rounded to the nearest cent). Open any service below to see what is included in plain language.
+        </p>
+        <p class="lead">
+          Services may be completed remotely or in person based on the best method for your specific issue and what will
+          get you the fastest, most reliable result.
+        </p>
+        <span class="pill">Tap any service to view details</span>
+      </div>
+    </section>
+
+    <section id="hardware">
+      <div class="container">
+        <h2 class="section-title">Hardware Services</h2>
+        <p class="section-note">Hands-on help with physical devices, installations, and reset services.</p>
+        <div class="service-list">
+          <details class="service-card">
+            <summary class="service-head">
+              <span class="service-name">Hardware Installation</span>
+              <span><span class="price-label">Geek Squad</span><span class="price-value">$39.99</span></span>
+              <span><span class="price-label">We Speak Computer</span><span class="price-value">$29.99</span></span>
+              <span><span class="price-label">Your Savings</span><span class="price-value savings">$10.00</span></span>
+            </summary>
+            <div class="service-body">
+              <p>We install one customer-provided internal or external computer component and make sure it is ready to use.</p>
+              <ul>
+                <li>Install one hardware component and required supporting software.</li>
+                <li>Configure settings for stable day-to-day use.</li>
+                <li>Test functionality and answer your setup questions before wrapping up.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary class="service-head">
+              <span class="service-name">Printer Setup or Troubleshooting</span>
+              <span><span class="price-label">Geek Squad</span><span class="price-value">$124.99</span></span>
+              <span><span class="price-label">We Speak Computer</span><span class="price-value">$93.74</span></span>
+              <span><span class="price-label">Your Savings</span><span class="price-value savings">$31.25</span></span>
+            </summary>
+            <div class="service-body">
+              <p>Whether your printer is brand new or giving you trouble, we help get printing and scanning working smoothly.</p>
+              <ul>
+                <li>Set up one printer, connect it to your network, and configure up to two devices.</li>
+                <li>Troubleshoot jams, connection issues, and software/driver problems.</li>
+                <li>Confirm print performance and walk you through daily use basics in simple steps.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary class="service-head">
+              <span class="service-name">Technology Reset Service</span>
+              <span><span class="price-label">Geek Squad</span><span class="price-value">$149.99</span></span>
+              <span><span class="price-label">We Speak Computer</span><span class="price-value">$112.49</span></span>
+              <span><span class="price-label">Your Savings</span><span class="price-value savings">$37.50</span></span>
+            </summary>
+            <div class="service-body">
+              <p>This service helps you safely reset selected smart devices so they are ready for a clean start.</p>
+              <ul>
+                <li>Factory reset up to ten supported devices you choose.</li>
+                <li>Verify each reset device is no longer tied to your old login profile.</li>
+                <li>Confirm non-app devices return to their initial setup screen when complete.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="software">
+      <div class="container">
+        <h2 class="section-title">Software Services</h2>
+        <p class="section-note">Performance tune-ups, software fixes, data movement, and operating system support.</p>
+        <div class="service-list">
+          <details class="service-card">
+            <summary class="service-head">
+              <span class="service-name">Virus Removal and Operating System Repair</span>
+              <span><span class="price-label">Geek Squad</span><span class="price-value">$149.99</span></span>
+              <span><span class="price-label">We Speak Computer</span><span class="price-value">$112.49</span></span>
+              <span><span class="price-label">Your Savings</span><span class="price-value savings">$37.50</span></span>
+            </summary>
+            <div class="service-body">
+              <p>When a computer is crashing, slow, or acting suspicious, we diagnose the cause and repair common system problems.</p>
+              <ul>
+                <li>Troubleshoot one device and identify software-level issues.</li>
+                <li>Fix startup errors, system instability, and common operating system failures.</li>
+                <li>Remove detected viruses and spyware, then test stability before sign-off.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary class="service-head">
+              <span class="service-name">Data Backup or Transfer (Up to 3 Devices)</span>
+              <span><span class="price-label">Geek Squad</span><span class="price-value">$99.99</span></span>
+              <span><span class="price-label">We Speak Computer</span><span class="price-value">$74.99</span></span>
+              <span><span class="price-label">Your Savings</span><span class="price-value savings">$25.00</span></span>
+            </summary>
+            <div class="service-body">
+              <p>We help protect your files by moving or backing up your data to one destination you provide.</p>
+              <ul>
+                <li>Back up or transfer data from up to three devices to a chosen drive or cloud destination.</li>
+                <li>Keep your folders organized so your files are easier to find after the move.</li>
+                <li>Set up backup software basics and help you choose a schedule that fits your routine.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary class="service-head">
+              <span class="service-name">OS Tune Up/Upgrade</span>
+              <span><span class="price-label">Geek Squad</span><span class="price-value">$39.99</span></span>
+              <span><span class="price-label">We Speak Computer</span><span class="price-value">$29.99</span></span>
+              <span><span class="price-label">Your Savings</span><span class="price-value savings">$10.00</span></span>
+            </summary>
+            <div class="service-body">
+              <p>We clean up and tune your operating system so everyday tasks feel faster and less frustrating.</p>
+              <ul>
+                <li>Remove unwanted startup items, shortcuts, and clutter.</li>
+                <li>Install key system updates for better security and reliability.</li>
+                <li>Adjust browser defaults and core settings to match your preferences.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary class="service-head">
+              <span class="service-name">Software Setup and Support</span>
+              <span><span class="price-label">Geek Squad</span><span class="price-value">$39.99</span></span>
+              <span><span class="price-label">We Speak Computer</span><span class="price-value">$29.99</span></span>
+              <span><span class="price-label">Your Savings</span><span class="price-value savings">$10.00</span></span>
+            </summary>
+            <div class="service-body">
+              <p>Need help getting an app installed and configured? We handle setup and make sure it is ready to use.</p>
+              <ul>
+                <li>Install and configure one software application on one computer.</li>
+                <li>Apply required updates and complete software activation when needed.</li>
+                <li>Set up shortcuts and quick-access options for easier day-to-day use.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary class="service-head">
+              <span class="service-name">Software Troubleshooting</span>
+              <span><span class="price-label">Geek Squad</span><span class="price-value">$99.99</span></span>
+              <span><span class="price-label">We Speak Computer</span><span class="price-value">$74.99</span></span>
+              <span><span class="price-label">Your Savings</span><span class="price-value savings">$25.00</span></span>
+            </summary>
+            <div class="service-body">
+              <p>When an app is crashing, freezing, or not behaving correctly, we troubleshoot and restore normal operation.</p>
+              <ul>
+                <li>Diagnose one software application on one computer.</li>
+                <li>Install needed updates for compatibility and stability.</li>
+                <li>Test the application after repair to confirm expected behavior.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="networking">
+      <div class="container">
+        <h2 class="section-title">Networking Services</h2>
+        <p class="section-note">Wireless setup, router configuration, and secure device connectivity for your home or office.</p>
+        <div class="service-list">
+          <details class="service-card">
+            <summary class="service-head">
+              <span class="service-name">Network Setup and Support</span>
+              <span><span class="price-label">Geek Squad</span><span class="price-value">$99.99</span></span>
+              <span><span class="price-label">We Speak Computer</span><span class="price-value">$74.99</span></span>
+              <span><span class="price-label">Your Savings</span><span class="price-value savings">$25.00</span></span>
+            </summary>
+            <div class="service-body">
+              <p>We configure and secure your router so your devices connect reliably and stay protected.</p>
+              <ul>
+                <li>Set up one router with practical security settings.</li>
+                <li>Connect supported devices and verify stable wireless access.</li>
+                <li>Test final network settings before service completion.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary class="service-head">
+              <span class="service-name">Home Wi-Fi Setup</span>
+              <span><span class="price-label">Geek Squad</span><span class="price-value">$174.99</span></span>
+              <span><span class="price-label">We Speak Computer</span><span class="price-value">$131.24</span></span>
+              <span><span class="price-label">Your Savings</span><span class="price-value savings">$43.75</span></span>
+            </summary>
+            <div class="service-body">
+              <p>We set up and tune your Wi-Fi network so coverage, speed, and security work better for your space.</p>
+              <ul>
+                <li>Configure router settings and help optimize placement.</li>
+                <li>Connect your devices and test signal quality in key areas.</li>
+                <li>Set up secure Wi-Fi name/password and optional advanced settings like guest access.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary class="service-head">
+              <span class="service-name">Add Device to an Existing Network</span>
+              <span><span class="price-label">Geek Squad</span><span class="price-value">$39.99</span></span>
+              <span><span class="price-label">We Speak Computer</span><span class="price-value">$29.99</span></span>
+              <span><span class="price-label">Your Savings</span><span class="price-value savings">$10.00</span></span>
+            </summary>
+            <div class="service-body">
+              <p>When a new device needs to join your current network, we connect it and make sure it communicates correctly.</p>
+              <ul>
+                <li>Add one network-capable device to your existing network.</li>
+                <li>Verify reliable connectivity and access to network resources.</li>
+                <li>Optionally configure file and print sharing when requested.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <section id="setups">
+      <div class="container">
+        <h2 class="section-title">Setup Services</h2>
+        <p class="section-note">New device setup, account configuration, and launch-ready preparation.</p>
+        <div class="service-list">
+          <details class="service-card">
+            <summary class="service-head">
+              <span class="service-name">Setup for Your Computer and Tablet</span>
+              <span><span class="price-label">Geek Squad</span><span class="price-value">$39.99</span></span>
+              <span><span class="price-label">We Speak Computer</span><span class="price-value">$29.99</span></span>
+              <span><span class="price-label">Your Savings</span><span class="price-value savings">$10.00</span></span>
+            </summary>
+            <div class="service-body">
+              <p>We get your device ready to use from the start, so you can jump in without setup stress.</p>
+              <ul>
+                <li>Complete first-time startup and check core device functionality.</li>
+                <li>Help sign in or create user/email accounts and configure up to three email accounts.</li>
+                <li>Install key updates, add selected apps, and remove common preloaded clutter.</li>
+              </ul>
+            </div>
+          </details>
+
+          <details class="service-card">
+            <summary class="service-head">
+              <span class="service-name">New Computer or Tablet Setup (No Data Transfer)</span>
+              <span><span class="price-label">Geek Squad</span><span class="price-value">$174.99</span></span>
+              <span><span class="price-label">We Speak Computer</span><span class="price-value">$131.24</span></span>
+              <span><span class="price-label">Your Savings</span><span class="price-value savings">$43.75</span></span>
+            </summary>
+            <div class="service-body">
+              <p>This is a full start-up service for a new computer or tablet when you want professional setup done right.</p>
+              <ul>
+                <li>Complete initial system setup and connect to existing internet/email basics.</li>
+                <li>Install one printer, one software title, and key updates based on your setup type.</li>
+                <li>Apply practical performance and security best-practice settings for safer daily use.</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+
+        <div class="contact-card">
+          <p>Need custom bundles for a small office, family plan, or ongoing monthly support? Reach out directly:</p>
+          <a class="contact-link" href="tel:+19092830855">(909) 283-0855</a><br />
+          <a class="contact-link" href="mailto:wespeakcomputersupport@gmail.com">wespeakcomputersupport@gmail.com</a>
+          <p style="margin-top: 14px;">
+            <strong style="color: #eaf2ff;">Seniors, students, and low-income households:</strong> you may qualify for an
+            extra <strong style="color: #eaf2ff;">20% off</strong> listed rates. See
+            <a class="inline-link" href="wespeakcomputer_community_discounts.html">Community savings</a>.
+          </p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><span id="year"></span> We Speak Computer - wespeakcomputer.net</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

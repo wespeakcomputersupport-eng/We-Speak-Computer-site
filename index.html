@@ -1,0 +1,563 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>We Speak Computer | Friendly Computer Support</title>
+  <meta
+    name="description"
+    content="We Speak Computer provides friendly remote and on-site computer support for homes and small businesses."
+  />
+  <style>
+    :root {
+      --bg: #071322;
+      --bg-soft: #0f2138;
+      --card: #132c4a;
+      --text: #eaf2ff;
+      --muted: #afc2dd;
+      --brand: #33d3ff;
+      --brand-2: #8d6bff;
+      --ok: #57e39f;
+      --warn: #ffc14f;
+      --danger: #ff7b7b;
+      --shadow: 0 16px 40px rgba(0, 0, 0, 0.25);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      background: radial-gradient(circle at 15% -10%, #1b3f68, transparent 35%),
+        radial-gradient(circle at 95% 0%, #412f91, transparent 32%),
+        var(--bg);
+      color: var(--text);
+      scroll-behavior: smooth;
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1100px, 92vw);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      backdrop-filter: blur(10px);
+      background: rgba(7, 19, 34, 0.8);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+      font-size: 1.05rem;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #00162f;
+      font-weight: 900;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+    }
+
+    .nav-links a {
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.94rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--brand);
+    }
+
+    .hero {
+      padding: 78px 0 34px;
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.2fr 0.8fr;
+      gap: 28px;
+      align-items: center;
+    }
+
+    .badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 0.85rem;
+      border-radius: 999px;
+      padding: 7px 12px;
+      background: rgba(51, 211, 255, 0.13);
+      color: #c4f3ff;
+      border: 1px solid rgba(51, 211, 255, 0.35);
+      margin-bottom: 14px;
+    }
+
+    h1 {
+      font-size: clamp(1.95rem, 5vw, 3.1rem);
+      margin: 0 0 10px;
+      line-height: 1.1;
+    }
+
+    .gradient {
+      background: linear-gradient(135deg, var(--brand), #d5d1ff 65%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 62ch;
+      margin: 0 0 24px;
+      font-size: 1.02rem;
+      line-height: 1.55;
+    }
+
+    .cta-row {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 12px 18px;
+      border-radius: 12px;
+      font-weight: 700;
+      border: 1px solid transparent;
+      transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+      box-shadow: var(--shadow);
+    }
+
+    .btn-primary {
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #081526;
+    }
+
+    .btn-ghost {
+      border-color: rgba(255, 255, 255, 0.2);
+      color: var(--text);
+      background: rgba(255, 255, 255, 0.03);
+    }
+
+    .hero-card {
+      background: linear-gradient(180deg, rgba(141, 107, 255, 0.22), rgba(19, 44, 74, 0.9));
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 20px;
+    }
+
+    .status-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      margin-top: 14px;
+    }
+
+    .status {
+      border-radius: 12px;
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      padding: 12px;
+      font-size: 0.88rem;
+      color: var(--muted);
+    }
+
+    .status strong {
+      display: block;
+      color: var(--text);
+      font-size: 1rem;
+      margin-top: 6px;
+    }
+
+    .status-detail {
+      display: block;
+      margin-top: 4px;
+      font-size: 0.82rem;
+      color: var(--muted);
+      line-height: 1.35;
+    }
+
+    #about .container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .about-layout {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 22px;
+      width: min(62ch, 100%);
+      margin: 0 auto;
+    }
+
+    .profile-photo-wrap {
+      margin: 0;
+      padding: 0;
+      border: 0;
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    .profile-photo {
+      display: block;
+      width: auto;
+      max-width: min(320px, 100%);
+      height: auto;
+      margin: 0 auto;
+      border-radius: var(--radius);
+      object-fit: contain;
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      box-shadow: var(--shadow);
+    }
+
+    .about-bio {
+      width: 100%;
+      text-align: center;
+    }
+
+    #about .section-title {
+      width: min(62ch, 100%);
+      text-align: center;
+    }
+
+    #about .lead {
+      max-width: none;
+      margin: 0;
+    }
+
+    section {
+      padding: 34px 0;
+    }
+
+    .section-title {
+      margin: 0 0 18px;
+      font-size: clamp(1.5rem, 3.5vw, 2rem);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .card {
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.04), rgba(255, 255, 255, 0.01));
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: var(--radius);
+      padding: 18px;
+    }
+
+    .card h3 {
+      margin: 0 0 8px;
+      font-size: 1.08rem;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .chip-list {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .chip {
+      font-size: 0.82rem;
+      color: #d8e7ff;
+      padding: 7px 10px;
+      border-radius: 999px;
+      background: rgba(51, 211, 255, 0.12);
+      border: 1px solid rgba(51, 211, 255, 0.35);
+    }
+
+    .contact-wrap {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+
+    .contact-card {
+      background: linear-gradient(160deg, rgba(141, 107, 255, 0.22), rgba(255, 255, 255, 0.03));
+      border-radius: var(--radius);
+      border: 1px solid rgba(255, 255, 255, 0.13);
+      padding: 18px;
+    }
+
+    .contact-card p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      margin: 5px 0;
+      font-weight: 700;
+      color: #d8e7ff;
+    }
+
+    .contact-link:hover {
+      color: var(--brand);
+    }
+
+    footer {
+      padding: 26px 0 34px;
+      color: var(--muted);
+      font-size: 0.9rem;
+      text-align: center;
+    }
+
+    .spark {
+      color: var(--warn);
+      margin-right: 5px;
+    }
+
+    @media (max-width: 900px) {
+      .hero-grid,
+      .contact-wrap,
+      .cards {
+        grid-template-columns: 1fr;
+      }
+
+      .hero {
+        padding-top: 56px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="#top" aria-label="We Speak Computer home">
+        <span class="logo-mark">WSC</span>
+        <span>We Speak Computer</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="#services">Services</a>
+        <a href="wespeakcomputer_pricing.html">Pricing</a>
+        <a href="wespeakcomputer_community_discounts.html">Community savings</a>
+        <a href="#about">About</a>
+        <a href="#skills">Tech Stack</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <div class="container hero-grid">
+        <div>
+          <p class="badge"><span class="spark">●</span> Friendly local + remote computer support</p>
+          <h1>
+            We speak computer
+            <span class="gradient">so you don't have to</span>
+          </h1>
+          <p class="lead">
+            Home office acting weird? Small business tech slowing you down? We fix devices, networks,
+            software, and security issues in plain English with fast, reliable support.
+          </p>
+          <div class="cta-row">
+            <a class="btn btn-primary" href="#contact">Get Help Now</a>
+            <a class="btn btn-ghost" href="wespeakcomputer_pricing.html">View Pricing</a>
+            <a class="btn btn-ghost" href="mailto:wespeakcomputersupport@gmail.com">Email Support</a>
+          </div>
+        </div>
+
+        <aside class="hero-card" aria-label="Service highlights">
+          <h2 style="margin: 0 0 8px;">Support Highlights</h2>
+          <p style="margin: 0; color: var(--muted); line-height: 1.5;">
+            Tier-3 troubleshooting backed by 7 years of advanced endpoint support and 20 years of
+            customer service.
+          </p>
+          <div class="status-row">
+            <div class="status">
+              Response
+              <strong>Quick Response</strong>
+              <span class="status-detail">9 am–5 pm daily</span>
+            </div>
+            <div class="status">
+              Service Area
+              <strong>Local + Remote</strong>
+            </div>
+            <div class="status">
+              Device Support
+              <strong>Windows, macOS, Mobile</strong>
+            </div>
+            <div class="status">
+              Business Focus
+              <strong>Small Teams & Home Offices</strong>
+            </div>
+          </div>
+        </aside>
+      </div>
+    </section>
+
+    <section id="services">
+      <div class="container">
+        <h2 class="section-title">Services That Keep You Running</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Computer Repair & Tune-Ups</h3>
+            <p>
+              Speed up slow PCs, remove malware, fix startup crashes, and handle hardware upgrades like SSD and memory.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Small Business IT Support</h3>
+            <p>
+              Ongoing support for teams, printers, shared files, Microsoft 365, and day-to-day user issues.
+            </p>
+          </article>
+          <article class="card">
+            <h3>New Device Setup</h3>
+            <p>
+              Laptops, desktops, mobile devices, and office peripherals configured correctly from day one.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Remote Helpdesk</h3>
+            <p>
+              Fast remote support sessions for software errors, account problems, and urgent technical roadblocks.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="about">
+      <div class="container">
+        <h2 class="section-title">Built by a Senior IT Specialist</h2>
+        <div class="about-layout">
+          <figure class="profile-photo-wrap">
+            <img
+              class="profile-photo"
+              src="./images/joshua-perez.png"
+              alt="Joshua Perez, We Speak Computer"
+              width="640"
+              loading="lazy"
+            />
+          </figure>
+          <div class="about-bio">
+            <p class="lead">
+              Hi, I am Joshua Perez. I am CompTIA A+ certified with 7 years of IT experience, based in Loma Linda. I provide
+              remote and in-person support for homes and small businesses. I have led endpoint and infrastructure projects
+              for organizations with up to 165 users across multiple offices. I specialize in translating technical
+              problems into clear solutions, then fixing them fast.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills">
+      <div class="container">
+        <h2 class="section-title">Tech We Speak Fluently</h2>
+        <div class="chip-list">
+          <span class="chip">Windows 10/11</span>
+          <span class="chip">macOS</span>
+          <span class="chip">Linux</span>
+          <span class="chip">Active Directory</span>
+          <span class="chip">Microsoft 365</span>
+          <span class="chip">DNS / DHCP</span>
+          <span class="chip">TCP/IP + VPN</span>
+          <span class="chip">PowerShell</span>
+          <span class="chip">Endpoint Security</span>
+          <span class="chip">PC Hardware Repair</span>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact">
+      <div class="container">
+        <h2 class="section-title">Need Help Right Now?</h2>
+        <div class="contact-wrap">
+          <article class="contact-card">
+            <p>
+              We Speak Computer is ready to help with remote or on-site service. Tell us what is happening and we will
+              get you back up and running.
+            </p>
+            <a class="contact-link" href="tel:+19092830855">(909) 283-0855</a><br />
+            <a class="contact-link" href="mailto:wespeakcomputersupport@gmail.com">wespeakcomputersupport@gmail.com</a><br />
+            <span style="color: var(--muted);">Loma Linda, California</span>
+          </article>
+          <article class="contact-card">
+            <p>
+              Most services are priced at <strong>75% of Geek Squad reference rates</strong>—see the full list and
+              savings column on our pricing page. Seniors, students, and low-income households may qualify for an
+              extra <strong>20% off</strong> listed rates.
+            </p>
+            <p>
+              <a class="contact-link" href="wespeakcomputer_pricing.html">Open Pricing Page</a>
+              &nbsp;·&nbsp;
+              <a class="contact-link" href="wespeakcomputer_community_discounts.html">Community savings</a>
+            </p>
+            <a class="btn btn-primary" href="mailto:wespeakcomputersupport@gmail.com?subject=Support%20Request%20from%20Website">
+              Send Support Request
+            </a>
+          </article>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><span id="year"></span> We Speak Computer. Clear answers. Fast fixes. Real support.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>

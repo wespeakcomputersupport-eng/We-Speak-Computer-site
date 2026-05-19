@@ -1,0 +1,314 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>We Speak Computer | Community Savings</title>
+  <meta
+    name="description"
+    content="Extra 20% off for seniors, students, and low-income households on We Speak Computer service rates."
+  />
+  <style>
+    :root {
+      --bg: #071322;
+      --bg-soft: #0f2138;
+      --text: #eaf2ff;
+      --muted: #afc2dd;
+      --brand: #33d3ff;
+      --brand-2: #8d6bff;
+      --good: #57e39f;
+      --line: rgba(255, 255, 255, 0.11);
+      --shadow: 0 16px 40px rgba(0, 0, 0, 0.24);
+      --radius: 16px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      color: var(--text);
+      background: radial-gradient(circle at 10% -10%, #1b3f68, transparent 35%),
+        radial-gradient(circle at 95% 0%, #412f91, transparent 30%),
+        var(--bg);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .container {
+      width: min(1120px, 92vw);
+      margin: 0 auto;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      backdrop-filter: blur(8px);
+      background: rgba(7, 19, 34, 0.82);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px 0;
+    }
+
+    .logo {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-weight: 800;
+      letter-spacing: 0.4px;
+    }
+
+    .logo-mark {
+      width: 34px;
+      height: 34px;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(135deg, var(--brand), var(--brand-2));
+      color: #02162f;
+      font-weight: 900;
+      font-size: 0.9rem;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      color: var(--muted);
+      font-weight: 600;
+      font-size: 0.94rem;
+    }
+
+    .nav-links a:hover {
+      color: var(--brand);
+    }
+
+    .hero {
+      padding: 58px 0 28px;
+    }
+
+    h1 {
+      margin: 0 0 12px;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1.15;
+    }
+
+    .gradient {
+      background: linear-gradient(135deg, var(--brand), #d4ceff 65%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      color: transparent;
+    }
+
+    .lead {
+      color: var(--muted);
+      max-width: 70ch;
+      line-height: 1.55;
+      margin: 0 0 20px;
+      font-size: 1.05rem;
+    }
+
+    section {
+      padding: 14px 0 26px;
+    }
+
+    .section-title {
+      margin: 0 0 14px;
+      font-size: clamp(1.3rem, 3.4vw, 1.8rem);
+    }
+
+    .cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 16px;
+    }
+
+    .card {
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      padding: 18px 18px 16px;
+      background: linear-gradient(160deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+      box-shadow: var(--shadow);
+    }
+
+    .card h3 {
+      margin: 0 0 10px;
+      font-size: 1.15rem;
+      color: #d7e7ff;
+    }
+
+    .card p {
+      margin: 0;
+      color: var(--muted);
+      line-height: 1.55;
+      font-size: 0.96rem;
+    }
+
+    .steps {
+      margin: 0;
+      padding: 0 0 0 1.2em;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    .steps li {
+      margin-bottom: 8px;
+    }
+
+    .contact-card {
+      margin-top: 8px;
+      border-radius: var(--radius);
+      border: 1px solid var(--line);
+      padding: 18px;
+      background: linear-gradient(160deg, rgba(141, 107, 255, 0.2), rgba(255, 255, 255, 0.03));
+    }
+
+    .contact-card p {
+      margin: 0 0 10px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .contact-link {
+      display: inline-flex;
+      margin: 4px 0;
+      font-weight: 700;
+      color: #d7e7ff;
+    }
+
+    .contact-link:hover {
+      color: var(--brand);
+    }
+
+    .inline-link {
+      font-weight: 700;
+      color: var(--brand);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .inline-link:hover {
+      color: #d7e7ff;
+    }
+
+    footer {
+      padding: 24px 0 32px;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container nav">
+      <a class="logo" href="https://wespeakcomputer.net/index.html" aria-label="Back to home">
+        <span class="logo-mark">WSC</span>
+        <span>We Speak Computer</span>
+      </a>
+      <nav class="nav-links" aria-label="Community savings navigation">
+        <a href="https://wespeakcomputer.net/index.html">Home</a>
+        <a href="wespeakcomputer_pricing.html">Pricing</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <h1><span class="gradient">Community savings:</span> an extra 20% off</h1>
+        <p class="lead">
+          We offer <strong style="color: #eaf2ff;">20% off our published service rates</strong> for seniors, students, and
+          low-income households. That discount applies to the prices listed on our
+          <a class="inline-link" href="wespeakcomputer_pricing.html">pricing page</a>—mention eligibility when you book,
+          and have any requested ID ready at your appointment or before your remote session.
+        </p>
+      </div>
+    </section>
+
+    <section id="who">
+      <div class="container">
+        <h2 class="section-title">Who qualifies</h2>
+        <div class="cards">
+          <article class="card">
+            <h3>Seniors</h3>
+            <p>
+              Customers <strong style="color: #eaf2ff;">age 60 or older</strong>. Please bring a valid photo ID that shows
+              your date of birth (driver license, state ID, passport, or similar).
+            </p>
+          </article>
+          <article class="card">
+            <h3>Students</h3>
+            <p>
+              Current students in <strong style="color: #eaf2ff;">high school, college, or trade school</strong>. A
+              current student ID, class schedule, or enrollment letter is fine.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Low-income households</h3>
+            <p>
+              If paying our standard rates would be a real hardship, you may qualify. We keep this simple—just tell us
+              when you reach out, and we will treat your request respectfully without a pile of paperwork.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="how">
+      <div class="container">
+        <h2 class="section-title">How to use it</h2>
+        <ol class="steps">
+          <li>
+            Check the services and rates on the
+            <a class="inline-link" href="wespeakcomputer_pricing.html">pricing page</a>.
+          </li>
+          <li>
+            Email or call and say you are requesting the <strong style="color: #eaf2ff;">community savings rate</strong>
+            before we schedule work.
+          </li>
+          <li>
+            For seniors and students, have your ID ready so we can note eligibility in your booking. Low-income
+            eligibility is handled through a short conversation when you contact us.
+          </li>
+          <li>
+            The 20% is applied to the final service total for qualifying work—we will confirm your discounted total before
+            we start.
+          </li>
+        </ol>
+
+        <div class="contact-card" style="margin-top: 22px;">
+          <p>Questions about eligibility or a quote with the community discount applied?</p>
+          <a class="contact-link" href="tel:+19092830855">(909) 283-0855</a><br />
+          <a class="contact-link" href="mailto:wespeakcomputersupport@gmail.com">wespeakcomputersupport@gmail.com</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p><span id="year"></span> We Speak Computer - wespeakcomputer.net</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
