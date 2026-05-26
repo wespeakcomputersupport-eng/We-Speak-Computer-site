@@ -179,6 +179,10 @@
       align-items: center;
     }
 
+    .service-head.service-head--two-price {
+      grid-template-columns: minmax(210px, 2fr) repeat(2, minmax(110px, 1fr));
+    }
+
     .service-head::-webkit-details-marker {
       display: none;
     }
@@ -305,8 +309,10 @@
       <div class="container">
         <h1><span class="gradient">Clear prices.</span> Friendly support.</h1>
         <p class="lead">
-          We Speak Computer pricing is <strong style="color: #eaf2ff;">75% of the listed Geek Squad reference price</strong>
-          (rounded to the nearest cent). Open any service below to see what is included in plain language.
+          We Speak Computer pricing is often <strong style="color: #eaf2ff;">75% of the listed Geek Squad reference price</strong>
+          (rounded to the nearest cent) for comparable services. Some services may not be priced lower than Geek Squad
+          because their listed rates are typically for <strong style="color: #eaf2ff;">in-store service</strong>, not
+          in-home visits. Open any service below to see what is included in plain language.
         </p>
         <p class="lead">
           Services may be completed remotely or in person based on the best method for your specific issue and what will
@@ -322,18 +328,19 @@
         <p class="section-note">Hands-on help with physical devices, installations, and reset services.</p>
         <div class="service-list">
           <details class="service-card">
-            <summary class="service-head">
+            <summary class="service-head service-head--two-price">
               <span class="service-name">Hardware Installation</span>
-              <span><span class="price-label">Geek Squad</span><span class="price-value">$39.99</span></span>
-              <span><span class="price-label">We Speak Computer</span><span class="price-value">$29.99</span></span>
-              <span><span class="price-label">Your Savings</span><span class="price-value savings">$10.00</span></span>
+              <span><span class="price-label">Geek Squad (In Store)</span><span class="price-value">$39.99</span></span>
+              <span><span class="price-label">We Speak Computer (In Home)</span><span class="price-value">$99.99</span></span>
             </summary>
             <div class="service-body">
-              <p>We install one customer-provided internal or external computer component and make sure it is ready to use.</p>
+              <p><strong>In-home service.</strong> Geek Squad may list a lower in-store price, but that is not the same as an in-home visit where we install, test, and verify everything at your location.</p>
+              <p>We hook everything up in your home, run real-world tests, and help you avoid compatibility surprises, complex cabling problems, and repeated trips back to the store. We also tidy cable routing when practical so your setup looks clean and is easier to maintain.</p>
               <ul>
                 <li>Install one hardware component and required supporting software.</li>
-                <li>Configure settings for stable day-to-day use.</li>
-                <li>Test functionality and answer your setup questions before wrapping up.</li>
+                <li>Install required drivers, update firmware when appropriate, and confirm the device is detected correctly.</li>
+                <li>Check BitLocker status (and safely pause it if required) so hardware changes do not trigger a recovery lockout.</li>
+                <li>Test functionality and basic performance on site before wrapping up.</li>
               </ul>
             </div>
           </details>
@@ -346,7 +353,7 @@
               <span><span class="price-label">Your Savings</span><span class="price-value savings">$31.25</span></span>
             </summary>
             <div class="service-body">
-              <p>Whether your printer is brand new or giving you trouble, we help get printing and scanning working smoothly.</p>
+              <p><strong>In-home service.</strong> Whether your printer is brand new or giving you trouble, we help get printing and scanning working smoothly.</p>
               <ul>
                 <li>Set up one printer, connect it to your network, and configure up to two devices.</li>
                 <li>Troubleshoot jams, connection issues, and software/driver problems.</li>
@@ -363,7 +370,7 @@
               <span><span class="price-label">Your Savings</span><span class="price-value savings">$37.50</span></span>
             </summary>
             <div class="service-body">
-              <p>This service helps you safely reset selected smart devices so they are ready for a clean start.</p>
+              <p><strong>In-home service.</strong> This service helps you safely reset selected smart devices so they are ready for a clean start.</p>
               <ul>
                 <li>Factory reset up to ten supported devices you choose.</li>
                 <li>Verify each reset device is no longer tied to your old login profile.</li>
@@ -378,7 +385,7 @@
     <section id="software">
       <div class="container">
         <h2 class="section-title">Software Services</h2>
-        <p class="section-note">Performance tune-ups, software fixes, data movement, and operating system support.</p>
+        <p class="section-note">Performance tune-ups, software fixes, and operating system support.</p>
         <div class="service-list">
           <details class="service-card">
             <summary class="service-head">
@@ -388,28 +395,11 @@
               <span><span class="price-label">Your Savings</span><span class="price-value savings">$37.50</span></span>
             </summary>
             <div class="service-body">
-              <p>When a computer is crashing, slow, or acting suspicious, we diagnose the cause and repair common system problems.</p>
+              <p><strong>In-home service.</strong> When a computer is crashing, slow, or acting suspicious, we diagnose the cause and repair common system problems.</p>
               <ul>
                 <li>Troubleshoot one device and identify software-level issues.</li>
                 <li>Fix startup errors, system instability, and common operating system failures.</li>
                 <li>Remove detected viruses and spyware, then test stability before sign-off.</li>
-              </ul>
-            </div>
-          </details>
-
-          <details class="service-card">
-            <summary class="service-head">
-              <span class="service-name">Data Backup or Transfer (Up to 3 Devices)</span>
-              <span><span class="price-label">Geek Squad</span><span class="price-value">$99.99</span></span>
-              <span><span class="price-label">We Speak Computer</span><span class="price-value">$74.99</span></span>
-              <span><span class="price-label">Your Savings</span><span class="price-value savings">$25.00</span></span>
-            </summary>
-            <div class="service-body">
-              <p>We help protect your files by moving or backing up your data to one destination you provide.</p>
-              <ul>
-                <li>Back up or transfer data from up to three devices to a chosen drive or cloud destination.</li>
-                <li>Keep your folders organized so your files are easier to find after the move.</li>
-                <li>Set up backup software basics and help you choose a schedule that fits your routine.</li>
               </ul>
             </div>
           </details>
@@ -422,6 +412,7 @@
               <span><span class="price-label">Your Savings</span><span class="price-value savings">$10.00</span></span>
             </summary>
             <div class="service-body">
+              <p><strong>Remote service:</strong> $29.99. <strong>In-home service:</strong> $99.99.</p>
               <p>We clean up and tune your operating system so everyday tasks feel faster and less frustrating.</p>
               <ul>
                 <li>Remove unwanted startup items, shortcuts, and clutter.</li>
@@ -471,19 +462,22 @@
     <section id="networking">
       <div class="container">
         <h2 class="section-title">Networking Services</h2>
-        <p class="section-note">Wireless setup, router configuration, and secure device connectivity for your home or office.</p>
+        <p class="section-note">All networking services below are <strong style="color: #eaf2ff;">in-home visits</strong> — wireless setup, router configuration, and secure device connectivity at your location.</p>
         <div class="service-list">
           <details class="service-card">
             <summary class="service-head">
-              <span class="service-name">Network Setup and Support</span>
-              <span><span class="price-label">Geek Squad</span><span class="price-value">$99.99</span></span>
-              <span><span class="price-label">We Speak Computer</span><span class="price-value">$74.99</span></span>
-              <span><span class="price-label">Your Savings</span><span class="price-value savings">$25.00</span></span>
+              <span class="service-name">Home Wi-Fi Setup</span>
+              <span><span class="price-label">Geek Squad (In Store)</span><span class="price-value">$174.99</span></span>
+              <span><span class="price-label">We Speak Computer (In Home)</span><span class="price-value">$131.24</span></span>
+              <span><span class="price-label">Your Savings</span><span class="price-value savings">$43.75</span></span>
             </summary>
             <div class="service-body">
-              <p>We configure and secure your router so your devices connect reliably and stay protected.</p>
+              <p><strong>In-home service.</strong> We configure and secure your router, then set up and tune your Wi-Fi network so coverage, speed, and security work better for your space.</p>
               <ul>
                 <li>Set up one router with practical security settings.</li>
+                <li>Configure router settings and help optimize placement.</li>
+                <li>Connect your devices and test signal quality in key areas.</li>
+                <li>Set up secure Wi-Fi name/password and optional advanced settings like guest access.</li>
                 <li>Connect supported devices and verify stable wireless access.</li>
                 <li>Test final network settings before service completion.</li>
               </ul>
@@ -491,34 +485,16 @@
           </details>
 
           <details class="service-card">
-            <summary class="service-head">
-              <span class="service-name">Home Wi-Fi Setup</span>
-              <span><span class="price-label">Geek Squad</span><span class="price-value">$174.99</span></span>
-              <span><span class="price-label">We Speak Computer</span><span class="price-value">$131.24</span></span>
-              <span><span class="price-label">Your Savings</span><span class="price-value savings">$43.75</span></span>
+            <summary class="service-head service-head--two-price">
+              <span class="service-name">Add up to 3 Devices to Your Home Network</span>
+              <span><span class="price-label">Geek Squad (In Store)</span><span class="price-value">$39.99</span></span>
+              <span><span class="price-label">We Speak Computer (In Home)</span><span class="price-value">$99.99</span></span>
             </summary>
             <div class="service-body">
-              <p>We set up and tune your Wi-Fi network so coverage, speed, and security work better for your space.</p>
+              <p><strong>In-home service.</strong> Geek Squad may list a lower per-device price, but that is not the same as an in-home visit where we connect and verify everything on site. We come to your home and add up to three network-capable devices so you do not have to struggle through complex phone troubleshooting.</p>
               <ul>
-                <li>Configure router settings and help optimize placement.</li>
-                <li>Connect your devices and test signal quality in key areas.</li>
-                <li>Set up secure Wi-Fi name/password and optional advanced settings like guest access.</li>
-              </ul>
-            </div>
-          </details>
-
-          <details class="service-card">
-            <summary class="service-head">
-              <span class="service-name">Add Device to an Existing Network</span>
-              <span><span class="price-label">Geek Squad</span><span class="price-value">$39.99</span></span>
-              <span><span class="price-label">We Speak Computer</span><span class="price-value">$29.99</span></span>
-              <span><span class="price-label">Your Savings</span><span class="price-value savings">$10.00</span></span>
-            </summary>
-            <div class="service-body">
-              <p>When a new device needs to join your current network, we connect it and make sure it communicates correctly.</p>
-              <ul>
-                <li>Add one network-capable device to your existing network.</li>
-                <li>Verify reliable connectivity and access to network resources.</li>
+                <li>Add up to three network-capable devices to your existing home network.</li>
+                <li>Verify reliable connectivity and access to network resources on each device.</li>
                 <li>Optionally configure file and print sharing when requested.</li>
               </ul>
             </div>
@@ -534,30 +510,13 @@
         <div class="service-list">
           <details class="service-card">
             <summary class="service-head">
-              <span class="service-name">Setup for Your Computer and Tablet</span>
-              <span><span class="price-label">Geek Squad</span><span class="price-value">$39.99</span></span>
-              <span><span class="price-label">We Speak Computer</span><span class="price-value">$29.99</span></span>
-              <span><span class="price-label">Your Savings</span><span class="price-value savings">$10.00</span></span>
-            </summary>
-            <div class="service-body">
-              <p>We get your device ready to use from the start, so you can jump in without setup stress.</p>
-              <ul>
-                <li>Complete first-time startup and check core device functionality.</li>
-                <li>Help sign in or create user/email accounts and configure up to three email accounts.</li>
-                <li>Install key updates, add selected apps, and remove common preloaded clutter.</li>
-              </ul>
-            </div>
-          </details>
-
-          <details class="service-card">
-            <summary class="service-head">
               <span class="service-name">New Computer or Tablet Setup (No Data Transfer)</span>
               <span><span class="price-label">Geek Squad</span><span class="price-value">$174.99</span></span>
               <span><span class="price-label">We Speak Computer</span><span class="price-value">$131.24</span></span>
               <span><span class="price-label">Your Savings</span><span class="price-value savings">$43.75</span></span>
             </summary>
             <div class="service-body">
-              <p>This is a full start-up service for a new computer or tablet when you want professional setup done right.</p>
+              <p><strong>In-home service.</strong> This is a full start-up service for a new computer or tablet when you want professional setup done right.</p>
               <ul>
                 <li>Complete initial system setup and connect to existing internet/email basics.</li>
                 <li>Install one printer, one software title, and key updates based on your setup type.</li>
